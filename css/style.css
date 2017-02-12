@@ -10,11 +10,11 @@
 /*COMMON*/
 .container{
     display: block;
-    width:1300px;
+    width: 75rem;
     margin:0 auto;
 }
 
-.txtColour1{
+.txtColor1{
     color: #24baa0;
 }
 
@@ -37,13 +37,13 @@ header nav{
 
 header nav .logo{
     float:left;
-    padding: 10px 0;
+    padding: 1rem 0;
     text-transform: uppercase;
 }
 
 header nav ul{
     list-style: none;
-    padding:10px 0;
+    padding: 1rem 0;
 }
 
 header nav ul.menu{
@@ -60,7 +60,7 @@ header nav ul.menu li ul{
     display: block;
     position: absolute;
     background: #000;
-    top: 40px;
+    top: 2.7rem;
 }
 
 header nav ul.menu ul li{
@@ -71,17 +71,14 @@ header nav ul.menu ul li{
 header nav ul.menu li ul::before{
     content:"";
     display: block;
-    width:30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     background: #000;
     position: absolute;
-    top: -5px;
+    top: -0.3rem;
     transform: rotate(45deg);
-    left: 35%;
+    left: 2.5rem;
 }
-
-
-
 
 
 
@@ -89,7 +86,7 @@ header nav ul.menu li ul::before{
 header nav ul.menu a{
     color:#fff;
     text-decoration: none;
-    padding:0 15px;
+    padding:0 1.5rem;
 }
 
 
@@ -108,29 +105,34 @@ section.slider-wrap ul li{
 }
 
 section.slider-wrap ul li img{
-    width: 40%;
+    width: 50%;
     float:left;
+    margin-top: 4rem;
 }
 
 section.slider-wrap ul li div{
-    width: 30%;
+    width: 50%;
     float: right;
-    padding: 10% 0;
+    padding: 8rem 2rem 8rem 0;
     text-align: center;
-    margin-right: 15%;
+    /* padding-right: 15%; */
 }
 
 section.slider-wrap h3{
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    font-size: 2rem;
+}
+
+section.slider-wrap ul li div span.txtColor1 {
+    font-size: 2rem;
 }
 
 section.slider-wrap ul li div p{
-    max-height: 50px;
+    max-height: 6rem;
     overflow: hidden;
-
-    font-size:0.6rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
 }
 
 section.slider-wrap a{
@@ -138,10 +140,10 @@ section.slider-wrap a{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    padding:10px 20px;
+    padding:1rem 2rem;
     display: inline-block;
-    font-size:0.6rem;
-    border-radius: 10px;
+    font-size: 1.8rem;
+    border-radius: 0.8rem;
 }
 
 
@@ -152,7 +154,7 @@ section.slider-wrap span.arrow-right{
     width:50px;
     height:50px;
     position:absolute;
-    top:180px;
+    top:350px;
     transform: rotate(45deg);
 
 }
@@ -161,13 +163,13 @@ section.slider-wrap span.arrow-right{
 section.slider-wrap span.arrow-left{
     border-left: 4px solid #24baa0;
     border-bottom: 4px solid #24baa0;
-    left:50px;
+    left:55px;
 }
 /* Ustawienie odpowiednich borderów aby wyglądało jak strzałka i ustawienie w odpowiednim miejscu*/
 section.slider-wrap span.arrow-right{
     border-right: 4px solid #24baa0;
     border-top: 4px solid #24baa0;
-    right:50px;
+    right:75px;
 
 }
 
@@ -178,3 +180,183 @@ section.slider-wrap::after{
     visibility: hidden;
     clear: both;
 }
+
+main section.boxes>div {
+    float: left;
+    width: 32%;
+    margin: 2rem 0 6rem 0;
+    position: relative;
+}
+
+main section.boxes::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+main section.boxes div:nth-child(2) {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+main section.boxes div.box img {
+    width: 100%;
+}
+
+main section.boxes div.box div.transparentBg {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    top: 180px;
+    padding: 15px 0 0 15px;
+
+}
+
+main section.boxes div.box div.transparentBg div.line, main section.boxes div.articleBox div, main section.pricePlan div.line {
+    display: inline-block;
+    height: 8px;
+    width: 150px;
+    background-color: #24baa0;
+}
+
+main section.boxes div.box div.transparentBg p {
+    padding-left: 7px;
+}
+
+main section.boxes div.articleBox {
+    border: 1px solid lightgray;
+    padding: 20px 15px;
+}
+
+main section.boxes div.articleBox p {
+    padding: 5px 2px;
+}
+
+main section.boxes div.articleBox p.txtColor2 {
+    color: #A4A4A4;
+}
+
+main section.pricePlan {
+    background-color: #F1F1F1;
+}
+
+main section.pricePlan section.container ul li {
+    position: relative;
+    border: 1px solid #D5D5D5;
+    width: 32%;
+    float: left;
+    height: 350px;
+}
+
+main section.pricePlan::after {
+    content: '';
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+
+main ul {
+    list-style: none;
+
+}
+
+main li {
+    margin: 50px 0;
+    padding: 30px 0;
+}
+main section.pricePlan section.container ul li:nth-child(2) {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+main section.pricePlan section.container >p{
+    padding: 20px 0 0px 0;
+}
+
+.outsideSquare {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #D5D5D5;
+    left: 43%;
+    top: -2.1rem;
+}
+
+.insideSquare {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #D5D5D5;
+    margin: 24%;
+}
+
+main section.pricePlan section.container ul li p.txtColor1 {
+    text-align: center;
+}
+
+main section.pricePlan section.container ul li div.price div {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #D5D5D5;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    position: relative;
+    margin: 20px 38%;
+}
+
+main section.pricePlan section.container ul li div.price div p:first-child{
+    position: absolute;
+    font-size: 1.5rem;
+    color: #A4A4A4;
+    bottom: 40%;
+    left: 11%;
+}
+
+main section.pricePlan section.container ul li div.price div p:last-child{
+    position: absolute;
+    font-size: 0.8rem;
+    color: #A4A4A4;
+    bottom: 20%;
+    left: 16%;
+}
+
+
+main section.pricePlan section.container ul li div.price input.join {
+    background-color: #24baa0;
+    color: white;
+    margin-bottom: 10px;
+    padding: 6px 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/*Contact Form*/
+
+div#contact p {
+    display: inline-block;
+    height: 8px;
+    width: 150px;
+    background-color: #24baa0;
+}
+
+
+main section.contactForm div#contact input, main section.contactForm div#contact textarea {
+    display: block;
+    margin: 20px 0;
+    border-color: #24baa0;
+    padding: 7px 4px;
+    width: 60%;
+    float: left;
+}
+
