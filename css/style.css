@@ -1,362 +1,362 @@
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    font-size:16px;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size:16px;
 }
 
 /*COMMON*/
 .container{
-    display: block;
-    width: 75rem;
-    margin:0 auto;
+  display: block;
+  width: 75rem;
+  margin:0 auto;
 }
 
 .txtColor1{
-    color: #24baa0;
+  color: #24baa0;
 }
 
 /*HEADER*/
 header{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d1d1d1+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d1d1d1+100 */
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
 
 }
 
 
 header nav{
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
 header nav .logo{
-    float:left;
-    padding: 1rem 0;
-    text-transform: uppercase;
+  float:left;
+  padding: 1rem 0;
+  text-transform: uppercase;
 }
 
 header nav ul{
-    list-style: none;
-    padding: 1rem 0;
+  list-style: none;
+  padding: 1rem 0;
 }
 
 header nav ul.menu{
-    float:right;
-    text-transform: uppercase;
+  float:right;
+  text-transform: uppercase;
 }
 
 header nav ul.menu li{
-    display: inline;
-    position: relative;
+  display: inline;
+  position: relative;
 }
 
 header nav ul.menu li ul{
-    display: block;
-    position: absolute;
-    background: #000;
-    top: 2.7rem;
+  display: block;
+  position: absolute;
+  background: #000;
+  top: 2.7rem;
 }
 
 header nav ul.menu ul li{
-    text-transform: initial;
+  text-transform: initial;
 }
 
 
 header nav ul.menu li ul::before{
-    content:"";
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    background: #000;
-    position: absolute;
-    top: -0.3rem;
-    transform: rotate(45deg);
-    left: 2.5rem;
+  content:"";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: #000;
+  position: absolute;
+  top: -0.3rem;
+  transform: rotate(45deg);
+  left: 2.5rem;
 }
 
 
 
 
 header nav ul.menu a{
-    color:#fff;
-    text-decoration: none;
-    padding:0 1.5rem;
+  color:#fff;
+  text-decoration: none;
+  padding:0 1.5rem;
 }
 
 
 header nav::after{
-    content:"";
-    display: block;
-    height: 0;
-    visibility: hidden;
-    clear: both;
+  content:"";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
 }
 
 /*BANER*/
 section.slider-wrap ul li{
-    list-style: none;
-    position:relative;
+  list-style: none;
+  position:relative;
 }
 
 section.slider-wrap ul li img{
-    width: 50%;
-    float:left;
-    margin-top: 4rem;
+  width: 50%;
+  float:left;
+  margin-top: 4rem;
 }
 
 section.slider-wrap ul li div{
-    width: 50%;
-    float: right;
-    padding: 8rem 2rem 8rem 0;
-    text-align: center;
-    /* padding-right: 15%; */
+  width: 50%;
+  float: right;
+  padding: 8rem 2rem 8rem 0;
+  text-align: center;
+  /* padding-right: 15%; */
 }
 
 section.slider-wrap h3{
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
 section.slider-wrap ul li div span.txtColor1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 section.slider-wrap ul li div p{
-    max-height: 6rem;
-    overflow: hidden;
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
+  max-height: 6rem;
+  overflow: hidden;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 section.slider-wrap a{
-    background: #24baa0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding:1rem 2rem;
-    display: inline-block;
-    font-size: 1.8rem;
-    border-radius: 0.8rem;
+  background: #24baa0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:1rem 2rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
 }
 
 
 /* Stworzenie kwadratów na strzałki slidera*/
 section.slider-wrap span.arrow-left,
 section.slider-wrap span.arrow-right{
-    display: block;
-    width:50px;
-    height:50px;
-    position:absolute;
-    top:350px;
-    transform: rotate(45deg);
+  display: block;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:350px;
+  transform: rotate(45deg);
 
 }
 
 /* Ustawienie odpowiednich borderów aby wyglądało jak strzałka i ustawienie w odpowiednim miejscu*/
 section.slider-wrap span.arrow-left{
-    border-left: 4px solid #24baa0;
-    border-bottom: 4px solid #24baa0;
-    left:55px;
+  border-left: 4px solid #24baa0;
+  border-bottom: 4px solid #24baa0;
+  left:55px;
 }
 /* Ustawienie odpowiednich borderów aby wyglądało jak strzałka i ustawienie w odpowiednim miejscu*/
 section.slider-wrap span.arrow-right{
-    border-right: 4px solid #24baa0;
-    border-top: 4px solid #24baa0;
-    right:75px;
+  border-right: 4px solid #24baa0;
+  border-top: 4px solid #24baa0;
+  right:75px;
 
 }
 
 section.slider-wrap::after{
-    content:"";
-    display: block;
-    height: 0;
-    visibility: hidden;
-    clear: both;
+  content:"";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
 }
 
 main section.boxes>div {
-    float: left;
-    width: 32%;
-    margin: 2rem 0 6rem 0;
-    position: relative;
+  float: left;
+  width: 32%;
+  margin: 2rem 0 6rem 0;
+  position: relative;
 }
 
 main section.boxes::after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 main section.boxes div:nth-child(2) {
-    margin-left: 2%;
-    margin-right: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 main section.boxes div.box img {
-    width: 100%;
+  width: 100%;
 }
 
 main section.boxes div.box div.transparentBg {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    height: 70px;
-    width: 100%;
-    top: 180px;
-    padding: 15px 0 0 15px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  top: 180px;
+  padding: 15px 0 0 15px;
 
 }
 
 main section.boxes div.box div.transparentBg div.line, main section.boxes div.articleBox div, main section.pricePlan div.line {
-    display: inline-block;
-    height: 8px;
-    width: 150px;
-    background-color: #24baa0;
+  display: inline-block;
+  height: 8px;
+  width: 150px;
+  background-color: #24baa0;
 }
 
 main section.boxes div.box div.transparentBg p {
-    padding-left: 7px;
+  padding-left: 7px;
 }
 
 main section.boxes div.articleBox {
-    border: 1px solid lightgray;
-    padding: 20px 15px;
+  border: 1px solid lightgray;
+  padding: 20px 15px;
 }
 
 main section.boxes div.articleBox p {
-    padding: 5px 2px;
+  padding: 5px 2px;
 }
 
 main section.boxes div.articleBox p.txtColor2 {
-    color: #A4A4A4;
+  color: #A4A4A4;
 }
 
 main section.pricePlan {
-    background-color: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 main section.pricePlan section.container ul li {
-    position: relative;
-    border: 1px solid #D5D5D5;
-    width: 32%;
-    float: left;
-    height: 350px;
+  position: relative;
+  border: 1px solid #D5D5D5;
+  width: 32%;
+  float: left;
+  height: 350px;
 }
 
 main section.pricePlan::after {
-    content: '';
-    height: 0;
-    visibility: hidden;
-    display: block;
-    clear: both;
+  content: '';
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
 }
 
 
 main ul {
-    list-style: none;
+  list-style: none;
 
 }
 
 main li {
-    margin: 50px 0;
-    padding: 30px 0;
+  margin: 50px 0;
+  padding: 30px 0;
 }
 main section.pricePlan section.container ul li:nth-child(2) {
-    margin-left: 2%;
-    margin-right: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 main section.pricePlan section.container >p{
-    padding: 20px 0 0px 0;
+  padding: 20px 0 0px 0;
 }
 
 .outsideSquare {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 1px solid #D5D5D5;
-    left: 43%;
-    top: -2.1rem;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #D5D5D5;
+  left: 43%;
+  top: -2.1rem;
 }
 
 .insideSquare {
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #D5D5D5;
-    margin: 24%;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #D5D5D5;
+  margin: 24%;
 }
 
 main section.pricePlan section.container ul li p.txtColor1 {
-    text-align: center;
+  text-align: center;
 }
 
 main section.pricePlan section.container ul li div.price div {
-    display: inline-block;
-    background-color: white;
-    border: 1px solid #D5D5D5;
-    border-radius: 50%;
-    height: 85px;
-    width: 85px;
-    position: relative;
-    margin: 20px 38%;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #D5D5D5;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  position: relative;
+  margin: 20px 38%;
 }
 
 main section.pricePlan section.container ul li div.price div p:first-child{
-    position: absolute;
-    font-size: 1.5rem;
-    color: #A4A4A4;
-    bottom: 40%;
-    left: 11%;
+  position: absolute;
+  font-size: 1.5rem;
+  color: #A4A4A4;
+  bottom: 40%;
+  left: 11%;
 }
 
 main section.pricePlan section.container ul li div.price div p:last-child{
-    position: absolute;
-    font-size: 0.8rem;
-    color: #A4A4A4;
-    bottom: 20%;
-    left: 16%;
+  position: absolute;
+  font-size: 0.8rem;
+  color: #A4A4A4;
+  bottom: 20%;
+  left: 16%;
 }
 
 
 main section.pricePlan section.container ul li div.price input.join {
-    background-color: #24baa0;
-    color: white;
-    margin-bottom: 10px;
-    padding: 6px 25px;
-    text-align: center;
-    border-radius: 8px;
+  background-color: #24baa0;
+  color: white;
+  margin-bottom: 10px;
+  padding: 6px 25px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 
 /*Contact Form*/
 
 div#contact p {
-    display: inline-block;
-    height: 8px;
-    width: 150px;
-    background-color: #24baa0;
+  display: inline-block;
+  height: 8px;
+  width: 150px;
+  background-color: #24baa0;
 }
 
 
 main section.contactForm div#contact input, main section.contactForm div#contact textarea {
-    display: block;
-    margin: 20px 0;
-    border-color: #24baa0;
-    padding: 7px 4px;
-    width: 60%;
-    float: left;
+  display: block;
+  margin: 20px 0;
+  border-color: #24baa0;
+  padding: 7px 4px;
+  width: 60%;
+  float: left;
 }
 

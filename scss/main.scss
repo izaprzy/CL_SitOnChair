@@ -1,0 +1,228 @@
+$gutter: 10px;
+
+@mixin grid($colNumber) {
+  @for $i from 1 through $colNumber {
+    .col-#{$i} {
+      width: 100% / $colNumber * $i;
+    }
+  }
+}
+
+%clearfix {
+  &:before, &:after{
+    content: "";
+    display: table;
+    clear: both
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  @extend %clearfix;
+}
+
+[class*='col-'] {
+  width: 100%;
+  float: left;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+@media screen and (min-width: 480px) {
+  @include grid(12);
+  .container {
+    width: 460px;
+  }
+  .row {
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+  }
+  header {
+    #navigation {
+      ul.menu {
+        text-align: right;
+        padding: 1rem $gutter 1rem 0;
+        li {
+          margin-left: 0;
+          width: auto;
+          padding-left: 15px;
+        }
+      }
+    }
+    .slider-wrap {
+      li.row {
+        .col-6 {
+          img {
+            margin-top: 35px;
+            width: 155%;
+            max-width: 200% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  @include grid(12);
+  margin-bottom: 10px;
+  .container {
+    max-width: 1170px;
+  }
+  header {
+    #navigation {
+      ul.menu {
+        text-align: right;
+        padding: 1rem $gutter 1rem 0;
+        li {
+          margin-left: 0;
+          width: auto;
+          padding-left: 15px;
+        }
+      }
+    }
+    .slider-wrap {
+      li.row {
+        .col-6 {
+          img {
+            margin-top: 35px;
+            width: 155%;
+            max-width: 200% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+*{
+  font-family: Arial, sans-serif;
+  font-size:16px;
+}
+
+$txt-primary-color: #24baa0;
+
+.txt-primary-color {
+  color: $txt-primary-color;
+}
+
+.txt-secondary-color {
+  color: #808080;
+}
+
+.dark-color {
+  background-color: #e4e4e4;
+}
+
+.darker-color {
+  background-color: #808080;
+}
+
+.light-color {
+  background-color: #f1f1f1;
+}
+
+.lighter-color {
+  background-color: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+//.container {
+//  width: 90%;
+//  margin: 0 auto;
+//}
+
+header {
+  section#navigation {
+    background-color: black;
+    color: #ffffff;
+    font-size: 14px;
+    div.logo {
+      padding: 1rem 0 1rem $gutter;
+    }
+    ul.menu {
+      list-style: none;
+      text-align: left;
+      padding: 0 0 1rem $gutter;
+      li {
+        display: inline-block;
+        width: 32%;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+  section#slider {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d1d1d1+100 */
+    background: rgb(255, 255, 255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d1d1d1', GradientType=0); /* IE6-9 */
+    section.container {
+      position: relative;
+      ul {
+        li {
+          min-height: 400px;
+          div {
+            text-align: center;
+          }
+          img {
+            max-width: 100%
+          }
+          div {
+            text-align: center;
+            h3 {
+              font-size: 1.5em;
+              margin-bottom: 20px;
+            }
+            p {
+              display: none;
+            }
+            a {
+              padding: 8px 20px;
+              background-color: $txt-primary-color;
+              margin: 3px;
+              border-radius: 5px;
+              color: white;
+              font-size: 1.25rem;
+              text-decoration: none;
+            }
+          }
+
+        }
+      }
+      span.arrow-left, span.arrow-right {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 120px;
+        transform: rotate(45deg);
+      }
+      span.arrow-left {
+        border-left: 4px solid #24baa0;
+        border-bottom: 4px solid #24baa0;
+        border-radius: 3px;
+        left: 30px;
+      }
+      span.arrow-right {
+        border-right: 4px solid #24baa0;
+        border-top: 4px solid #24baa0;
+        right: 30px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
