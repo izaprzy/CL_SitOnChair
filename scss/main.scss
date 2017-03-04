@@ -1,5 +1,5 @@
-$gutter: 10px;
-
+$gutter: 40px;
+$breakpoint-tablet: 800px;
 @mixin grid($colNumber) {
   @for $i from 1 through $colNumber {
     .col-#{$i} {
@@ -7,6 +7,8 @@ $gutter: 10px;
     }
   }
 }
+
+
 
 %clearfix {
   &:before, &:after{
@@ -32,87 +34,21 @@ $gutter: 10px;
   padding-right: $gutter;
 }
 
-@media screen and (min-width: 480px) {
-  @include grid(12);
-  .container {
-    width: 460px;
-  }
-  .row {
-    margin-right: -$gutter;
-    margin-left: -$gutter;
-  }
-  header {
-    #navigation {
-      ul.menu {
-        text-align: right;
-        padding: 1rem $gutter 1rem 0;
-        li {
-          margin-left: 0;
-          width: auto;
-          padding-left: 15px;
-        }
-      }
-    }
-    .slider-wrap {
-      li.row {
-        .col-6 {
-          img {
-            margin-top: 35px;
-            width: 155%;
-            max-width: 200% !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  @include grid(12);
-  margin-bottom: 10px;
-  .container {
-    max-width: 1170px;
-  }
-  header {
-    #navigation {
-      ul.menu {
-        text-align: right;
-        padding: 1rem $gutter 1rem 0;
-        li {
-          margin-left: 0;
-          width: auto;
-          padding-left: 15px;
-        }
-      }
-    }
-    .slider-wrap {
-      li.row {
-        .col-6 {
-          img {
-            margin-top: 35px;
-            width: 155%;
-            max-width: 200% !important;
-          }
-        }
-      }
-    }
-  }
-}
-
-
 *{
   font-family: Arial, sans-serif;
   font-size:16px;
 }
 
 $txt-primary-color: #24baa0;
+$txt-secondary-color: #808080;
+
 
 .txt-primary-color {
   color: $txt-primary-color;
 }
 
 .txt-secondary-color {
-  color: #808080;
+  color: $txt-secondary-color;
 }
 
 .dark-color {
@@ -135,11 +71,9 @@ $txt-primary-color: #24baa0;
   display: none;
 }
 
-//.container {
-//  width: 90%;
-//  margin: 0 auto;
-//}
-
+.transparentBg {
+  opacity: 0.8;
+}
 header {
   section#navigation {
     background-color: black;
@@ -163,6 +97,7 @@ header {
       }
     }
   }
+  /*Slider with chair*/
   section#slider {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d1d1d1+100 */
     background: rgb(255, 255, 255); /* Old browsers */
@@ -170,26 +105,27 @@ header {
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d1d1d1', GradientType=0); /* IE6-9 */
-    section.container {
-      position: relative;
-      ul {
-        li {
-          min-height: 400px;
-          div {
-            text-align: center;
+    position: relative;
+    height: auto;
+    ul {
+      li {
+        div {
+          text-align: center;
+        }
+        img {
+          max-width: 90%;
+        }
+        div {
+          text-align: center;
+          h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
           }
-          img {
-            max-width: 100%
+          p {
+            display: none;
           }
           div {
-            text-align: center;
-            h3 {
-              font-size: 1.5em;
-              margin-bottom: 20px;
-            }
-            p {
-              display: none;
-            }
+            height: 40px;
             a {
               padding: 8px 20px;
               background-color: $txt-primary-color;
@@ -200,7 +136,129 @@ header {
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+  }
+}
 
+main {
+  section.boxes {
+    div {
+      position: relative;
+      margin-top: 20px;
+      a{
+        img {
+          width: 90%;
+        }
+      }
+      div.transparentBg {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        top: 54%;
+        left: 1%;
+        padding: 15px 0 0 15px;
+        font-size: 1.25rem;
+        p {
+          font-size: 12px;
+          text-align: left;
+          padding-left: 5px;
+          border-bottom: 6px $txt-primary-color solid;
+          display: block;
+          margin: 10px 0 0 65px;
+          width: 50%;
+          position: absolute;
+          right: 43%;
+          bottom: 68%;
+        }
+      }
+    }
+  }
+  div.left-box {
+    padding-left: 0;
+    text-align: center;
+  }
+  div.middle-box {
+    padding-left: 0;
+    text-align: center;
+  }
+  div.right-box {
+    border: 1px solid $txt-secondary-color;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    p:first-child {
+      border-bottom: 6px $txt-primary-color solid;
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 140px;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: $breakpoint-tablet) {
+  @include grid(12);
+  .container {
+    max-width: 1250px;
+  }
+  header {
+    section#navigation {
+      div.logo {
+        padding: 1rem 0 1rem $gutter;
+      }
+      ul.menu {
+        //margin-top: 50px;
+        text-align: right;
+        padding: 1rem $gutter 1rem 0;
+        li {
+          margin-left: 0;
+          width: auto;
+          padding-left: 15px;
+          //position: relative;
+          //ul {
+          //  &:hover {
+          //    display: table-caption;
+          //    position: absolute;
+          //    width: 100%;
+          //    list-style: none;
+          //    margin: 0;
+          //    top: 25px;
+          //  }
+        }
+      }
+    }
+    section#slider {
+      position: relative;
+      ul {
+        li {
+          div {
+            text-align: inherit;
+            margin-top: 40px;
+            padding-right: 0px;
+          }
+          img {
+            max-width: 100%;
+          }
+          div {
+            text-align: center;
+            padding-right: 80px;
+            h3 {
+              font-size: 2.0em;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            }
+            p {
+              display: inline;
+            }
+            div {
+              padding-right: 0;
+            }
+          }
         }
       }
       span.arrow-left, span.arrow-right {
@@ -215,14 +273,20 @@ header {
         border-left: 4px solid #24baa0;
         border-bottom: 4px solid #24baa0;
         border-radius: 3px;
-        left: 30px;
+        left: 50px;
       }
       span.arrow-right {
         border-right: 4px solid #24baa0;
         border-top: 4px solid #24baa0;
-        right: 30px;
+        right: 50px;
         border-radius: 3px;
       }
     }
   }
 }
+
+
+
+
+
+
